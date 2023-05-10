@@ -1,5 +1,17 @@
-//
-// Created by ASUS on 07/05/2023.
-//
-
 #include "OldNinja.hpp"
+
+using namespace std;
+namespace ariel{
+
+    OldNinja::OldNinja() {
+
+    }
+
+    OldNinja::OldNinja(string name, Point location) : Ninja(std::move(name), location) {
+
+    }
+
+//    OldNinja::~OldNinja() {
+//
+//    }
+}
