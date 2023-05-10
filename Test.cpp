@@ -13,12 +13,27 @@ TEST_CASE("Testing the YountNinja class") {
 }
 
 TEST_CASE("Testing the OldNinja class") {
+    SUBCASE("creating an OldNinja") {
     Point p{30, 40};
     OldNinja o{"Bob", p};
     CHECK(o.getName() == "Bob");
     CHECK((o.getLocation() == p));
-    CHECK((o.getSpeed() == 12));
-    CHECK((o.getHitPoints() == 120));
+    CHECK((o.getSpeed() == 8));
+    CHECK((o.getHitPoints() == 150));
+
+    SUBCASE("Moving a ninja") {
+        Point loc{30, 34};
+        YountNinja c{"Mary", loc};
+        o.move(&c);
+        CHECK(o.getLocation() == loc);
+    }
+
+    SUBCASE("Slashing a character") {
+        Point loc2{1, 1};
+        YountNinja d{"Mary", loc2};
+        o.slash(&d);
+        CHECK(d.getHitPoints() < 100);
+    }
 }
 
 TEST_CASE("Testing the TrainedNinja class") {
@@ -26,11 +41,11 @@ TEST_CASE("Testing the TrainedNinja class") {
     TrainedNinja t{"Alice", p};
     CHECK(t.getName() == "Alice");
     CHECK((t.getLocation() == p));
-    CHECK((t.getSpeed() == 8));
-    CHECK((t.getHitPoints() == 150));
+    CHECK((t.getSpeed() == 12));
+    CHECK((t.getHitPoints() == 120));
     CHECK(t.isAlive());
 }
-//12
+//14
 TEST_CASE("Testing the Cowboy class") {
     Point p{70, 80};
     Cowboy c{"Bill", p};
@@ -45,7 +60,7 @@ TEST_CASE("Testing the Cowboy class") {
         CHECK(!c.isAlive());
     }
 }
-//18
+//20
 TEST_CASE("Testing the Point class") {
     Point p1{1, 2};
     Point p2{3, 4};
@@ -61,4 +76,4 @@ TEST_CASE("Testing the Point class") {
         CHECK((p1 == p2));
     }
 }
-//20
+//22
