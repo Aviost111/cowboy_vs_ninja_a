@@ -12,7 +12,7 @@ namespace ariel{
     }
 
 //    Character::~Character() {
-//
+//        delete this;
 //    }
 
     bool Character::isAlive() {
@@ -35,11 +35,23 @@ namespace ariel{
         return Point();
     }
 
-    void Character::print() {
-
+    string Character::print() const{
+        return {};
     }
 
     int Character::getHitPoints() const {
         return 0;
+    }
+
+    void Character::setLocation(const Point &location) {
+        Character::location = location;
+    }
+
+    void Character::setHitPoints(int hitPoints) {
+        Character::hitPoints = hitPoints;
+    }
+
+    void Character::setName(const string &name) {
+        Character::name = name;
     }
 }

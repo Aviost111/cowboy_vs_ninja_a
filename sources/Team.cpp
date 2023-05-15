@@ -1,4 +1,6 @@
 #include "Team.hpp"
+#include <iostream>
+
 
 using namespace std;
 namespace ariel{
@@ -9,12 +11,27 @@ namespace ariel{
     }
 
 //    Team::~Team() {
-//
+//        delete this->leader;
+////        for (Character* character : this->team) {
+////            delete character;
+////        }
 //    }
 
-    void Team::add(Character *character) {
 
+    void Team::add(Character* character) {
+//        bool added = false;
+//        for (Character*& Char : team) {
+//            if (Char == nullptr) {
+//                Char = character;
+//                added = true;
+//                break;
+//            }
+//        }
+//        if (!added) {
+//            throw std::runtime_error("Team is full");
+//        }
     }
+
 
     void Team::attack(Team *enemyTeam) {
 
@@ -36,11 +53,11 @@ namespace ariel{
 
     }
 
-    std::array<Character, teamSize> Team::getArr() {
-        return std::array<Character, teamSize>();
+    std::array<Character*, teamSize> Team::getArr() {
+        return std::array<Character*, teamSize>();
     }
 
-    void Team::setArr(std::array<Character, teamSize> team) {
+    void Team::setArr(std::array<Character*, teamSize> team) {
 
     }
 

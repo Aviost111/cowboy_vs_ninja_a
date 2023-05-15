@@ -1,16 +1,14 @@
 #ifndef COWBOY_VS_NINJA_A_YOUNGNINJA_HPP
 #define COWBOY_VS_NINJA_A_YOUNGNINJA_HPP
 
+
 #include "Ninja.hpp"
 
 namespace ariel {
-    class YountNinja : public Ninja {
+    class YoungNinja : public Ninja {
     public:
-        YountNinja();
-
-        YountNinja(std::string name, Point location);
-
-//        ~YountNinja()=default;
+        YoungNinja();
+        YoungNinja(std::string name, Point location);
     };
 }
 

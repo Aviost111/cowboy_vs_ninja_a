@@ -9,19 +9,12 @@ namespace ariel {
         int bulletCount;
     public:
         Cowboy();
-
         Cowboy(std::string name, Point location);
 
-//        ~Cowboy()=default;
-
         void shoot(Character *enemy);
-
         bool hasboolets();
-
         void reload();
-
         int getAmmo() const;
-
     };
 }
 

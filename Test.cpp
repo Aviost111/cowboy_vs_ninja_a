@@ -5,7 +5,7 @@ using namespace ariel;
 
 TEST_CASE("Testing the YountNinja class") {
     Point p{10, 20};
-    YountNinja y{"John", p};
+    YoungNinja y{"John", p};
     CHECK(y.getName() == "John");
     CHECK((y.getLocation() == p));
     CHECK((y.getSpeed() == 14));
@@ -22,14 +22,14 @@ TEST_CASE("Testing the OldNinja class") {
 
     SUBCASE("Moving a ninja") {
         Point loc{30, 34};
-        YountNinja c{"Mary", loc};
+        YoungNinja c{"Mary", loc};
         o.move(&c);
         CHECK((o.getLocation() == loc));
     }
 
     SUBCASE("Slashing a character") {
         Point loc2{1, 1};
-        YountNinja d{"Mary", loc2};
+        YoungNinja d{"Mary", loc2};
         o.slash(&d);
         CHECK((d.getHitPoints() < 100));
     }
@@ -120,6 +120,9 @@ TEST_CASE("Team class tests") {
         secondTeam->attack(team2);
         smartTeam->attack(team2);
         CHECK_EQ(team2->stillAlive(), 0);
+//        delete c2;
+        delete n3;
+        delete team2;
     }
 
     SUBCASE("Still alive") {
@@ -144,7 +147,21 @@ TEST_CASE("Team class tests") {
         Cowboy *c2 = new Cowboy("Mike", p1);
         team1->setLeader(c2);
         CHECK_EQ(team1->getLeader(), c2);
+        delete c2;
     }
+    delete c1;
+    delete n1;
+    delete n2;
+    delete team1;
+    delete d1;
+    delete e1;
+    delete e2;
+    delete secondTeam;
+    delete b1;
+    delete a1;
+    delete a2;
+    delete smartTeam;
+
 }
 
 //need to add tests for Team

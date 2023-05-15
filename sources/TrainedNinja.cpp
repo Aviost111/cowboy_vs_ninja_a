@@ -9,8 +9,8 @@ namespace ariel{
 
     TrainedNinja::TrainedNinja(string name, Point location) : Ninja(std::move(name), location)
     {
-        this->speed=12;
-        this->hitPoints=120;
+        this->setSpeed(12);
+        this->setHitPoints(120);
     }
 
 //    TrainedNinja::~TrainedNinja() {

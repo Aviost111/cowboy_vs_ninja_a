@@ -7,16 +7,21 @@
 
 namespace ariel {
     class Character {
-    protected:
-        Point location;// NOLINT(cppcoreguidelines-non-private-member-variables-in-classes)
-        int hitPoints;// NOLINT(cppcoreguidelines-non-private-member-variables-in-classes)
-        std::string name;// NOLINT(cppcoreguidelines-non-private-member-variables-in-classes)
+    private:
+        Point location;
+        int hitPoints;
+        std::string name;
     public:
         Character(std::string name,Point location);
 
         Character();
 
-//        ~Character()=default;
+//        virtual ~Character()=default;
+
+//        Character(const Character&) = delete;
+//        Character& operator=(const Character&) = delete;
+//        Character(Character&&) = delete;
+//        Character& operator=(Character&&) = delete;
 
         bool isAlive();
 
@@ -30,7 +35,13 @@ namespace ariel {
 
         Point getLocation();
 
-        void print();
+        std::string print() const;
+
+        void setLocation(const Point &location);
+
+        void setHitPoints(int hitPoints);
+
+        void setName(const std::string &name);
     };
 }
 

@@ -26,4 +26,8 @@ namespace ariel{
     int Ninja::getSpeed() const {
         return 0;
     }
+
+    void Ninja::setSpeed(int speed) {
+        this->speed = speed;
+    }
 }
