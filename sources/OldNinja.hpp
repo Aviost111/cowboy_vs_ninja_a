@@ -8,6 +8,7 @@ namespace ariel {
     public:
         OldNinja();
         OldNinja(std::string name, Point location);
+
     };
 }
 

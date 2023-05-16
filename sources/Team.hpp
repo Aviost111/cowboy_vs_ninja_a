@@ -27,6 +27,8 @@ namespace ariel {
 
         virtual void print();
 
+        void leaderDead();
+
         void setArr(std::array<Character*, teamSize> team);
 
         std::array<Character*, teamSize> getArr();
@@ -35,10 +37,10 @@ namespace ariel {
 
         Character* getLeader();
 
-        Team(const Team&) = delete;
-        Team& operator=(const Team&) = delete;
-        Team(Team&&) = delete;
-        Team& operator=(Team&&) = delete;
+//        Team(const Team&) = delete;
+//        Team& operator=(const Team&) = delete;
+//        Team(Team&&) = delete;
+//        Team& operator=(Team&&) = delete;
     };
 
     class Team2 : public Team {

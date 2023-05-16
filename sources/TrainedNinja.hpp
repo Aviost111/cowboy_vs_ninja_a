@@ -8,6 +8,7 @@ namespace ariel {
     public:
         TrainedNinja();
         TrainedNinja(std::string name, Point location);
+
     };
 }
 

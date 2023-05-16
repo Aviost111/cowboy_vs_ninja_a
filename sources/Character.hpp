@@ -16,7 +16,7 @@ namespace ariel {
 
         Character();
 
-//        virtual ~Character()=default;
+        virtual ~Character()=default;
 
 //        Character(const Character&) = delete;
 //        Character& operator=(const Character&) = delete;

@@ -3,24 +3,28 @@
 
 
 using namespace std;
-namespace ariel{
+namespace ariel {
 
 
-    Team::Team(Character *leader):leader(leader) {
-
+    Team::Team(Character *leader) : leader(leader) {
+//        this->leader=leader;
+//        this->team[0]=leader;
     }
 
 //    Team::~Team() {
-//        delete this->leader;
-////        for (Character* character : this->team) {
-////            delete character;
-////        }
+////        delete this->leader;
+//        for (Character *character: this->team) {
+//            delete character;
+//        }
 //    }
 
+    void Team::leaderDead() {
 
-    void Team::add(Character* character) {
+    }
+
+    void Team::add(Character *character) {
 //        bool added = false;
-//        for (Character*& Char : team) {
+//        for (Character *&Char: team) {
 //            if (Char == nullptr) {
 //                Char = character;
 //                added = true;
@@ -46,18 +50,18 @@ namespace ariel{
     }
 
     Character *Team::getLeader() {
-        return nullptr;
+        return this->leader;
     }
 
     void Team::setLeader(Character *leader) {
 
     }
 
-    std::array<Character*, teamSize> Team::getArr() {
-        return std::array<Character*, teamSize>();
+    std::array<Character *, teamSize> Team::getArr() {
+        return std::array<Character *, teamSize>();
     }
 
-    void Team::setArr(std::array<Character*, teamSize> team) {
+    void Team::setArr(std::array<Character *, teamSize> team) {
 
     }
 

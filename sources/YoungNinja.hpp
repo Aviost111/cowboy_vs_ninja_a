@@ -9,6 +9,7 @@ namespace ariel {
     public:
         YoungNinja();
         YoungNinja(std::string name, Point location);
+
     };
 }
 

@@ -120,7 +120,7 @@ TEST_CASE("Team class tests") {
         secondTeam->attack(team2);
         smartTeam->attack(team2);
         CHECK_EQ(team2->stillAlive(), 0);
-//        delete c2;
+        delete c2;
         delete n3;
         delete team2;
     }
